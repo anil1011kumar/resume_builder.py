@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="mb-4">CV Generator</h2>
+        <hr>
+        <h4 class="mb-3">Please fill out your details</h4>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Name:</label>
+                <input type="text" class="form-control" id="name" name="Name" placeholder="Enter your name">
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone:</label>
+                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter phone number">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-3">
+                <label for="institute" class="form-label">Institute:</label>
+                <input type="text" class="form-control" id="institute" name="institute" placeholder="Enter institute name">
+            </div>
+            <div class="mb-3">
+                <label for="degree" class="form-label">Degree:</label>
+                <input type="text" class="form-control" id="degree" name="degree" placeholder="Enter your degree">
+            </div>
+            <div class="mb-3">
+                <label for="marks" class="form-label">Marks:</label>
+                <input type="text" class="form-control" id="marks" name="marks" placeholder="Enter your marks">
+            </div>
+            <div class="mb-3">
+                <label for="project" class="form-label">Project:</label>
+                <input type="text" class="form-control" id="project" name="project" placeholder="Enter project details">
+            </div>
+            <div class="mb-3">
+                <label for="skills" class="form-label">Skills:</label>
+                <input type="text" class="form-control" id="skills" name="skills" placeholder="Enter your skills">
+            </div>
+            <div class="mb-3">
+                <label for="about" class="form-label">About:</label>
+                <input type="text" class="form-control" id="about" name="about" placeholder="Enter about yourself">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" 
+            integrity="sha384-cVKIPhG81rK0r+0IYwE3U5I9j5B9L6e3eB4vH3D8VXnFwWrJUB8QsF86dIHNDz0W" 
+            crossorigin="anonymous"></script>
+</body>
+</html>
